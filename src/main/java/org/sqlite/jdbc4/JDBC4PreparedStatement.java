@@ -21,8 +21,7 @@ public class JDBC4PreparedStatement extends JDBC3PreparedStatement implements Pr
 
     // JDBC 4
     public void setRowId(int parameterIndex, RowId x) throws SQLException {
-        // TODO Support this
-        throw new SQLFeatureNotSupportedException();
+        setObject( parameterIndex, x);
     }
 
     public void setNString(int parameterIndex, String value)

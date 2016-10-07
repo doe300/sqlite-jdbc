@@ -52,13 +52,11 @@ public class JDBC4ResultSet extends JDBC3ResultSet implements ResultSet, ResultS
     }
 
     public RowId getRowId(int columnIndex) throws SQLException {
-        // TODO Support this
-        throw new SQLFeatureNotSupportedException();
+        return new JDBC4RowId(getLong( columnIndex ));
     }
 
     public RowId getRowId(String columnLabel) throws SQLException {
-        // TODO Support this
-        throw new SQLFeatureNotSupportedException();
+		return new JDBC4RowId(getLong( columnLabel ));
     }
 
     public void updateRowId(int columnIndex, RowId x) throws SQLException {
